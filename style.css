@@ -129,6 +129,27 @@ display: none;
     margin-top: 10px 0 25px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  padding: 16px;
+}
+
+@media (max-width: 600px) {
+  .columns {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .home-info .btn-sci {
     display: flex;
     align-items: center;
@@ -253,5 +274,191 @@ mix-blend-mode: lighten;
 @keyframes show-bars {
 100% {
 transform: translateY (0%);
+    }
+}
+
+
+
+@media screen and (max-width: 992px) {
+    .navbar {
+        padding: 20px 4%;
+    }
+
+    .navbar ul li {
+        margin-left: 15px;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+    }
+
+    .home {
+        padding: 100px 4% 40px;
+        gap: 25px;
+    }
+
+    .home-info h1 {
+        font-size: 42px;
+    }
+
+    .home-info h2 {
+        font-size: 25px;
+    }
+
+    .home-img .img-box {
+        width: 35vw;
+        height: 35vw;
+    }
+}
+
+
+/* ===== Mobile phones ===== */
+@media screen and (max-width: 600px) {
+
+    /* Navigation bar */
+    .navbar {
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 4%;
+    }
+
+    .navbar .logo {
+        font-size: 25px;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 15px;
+    }
+
+    .navbar ul li {
+        margin-left: 0;
+    }
+
+    .navbar ul li a {
+        font-size: 14px;
+    }
+
+
+    .home {
+        height: auto;
+        min-height: 100vh;
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        gap: 25px;
+        padding: 150px 6% 40px;
+    }
+
+    /* Heading */
+    .home-info {
+        width: 100%;
+    }
+
+    .home-info h1 {
+        font-size: 32px;
+    }
+
+    .home-info h2 {
+        display: block;
+        font-size: 20px;
+        line-height: 1.6;
+        margin-top: 5px;
+    }
+
+    /* Animated job titles */
+    .home-info h2 span {
+        font-size: 20px;
+    }
+
+    /* Paragraph */
+    .home-info p {
+        font-size: 14px;
+        line-height: 1.8;
+        margin: 15px 0 25px;
+    }
+
+    /* CV button and social icons */
+    .home-info .btn-sci {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px 24px;
+    }
+
+    .home-info .btn-sci .sci {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .home-info .btn-sci .sci a {
+        font-size: 20px;
+        padding: 7px;
+        margin: 0 5px;
+    }
+
+    /* Profile image */
+    .home-img .img-box {
+        width: 65vw;
+        height: 65vw;
+        max-width: 280px;
+        max-height: 280px;
+    }
+
+    .home-img .img-box::before,
+    .home-img .img-box::after {
+        width: 300px;
+        height: 300px;
+    }
+
+    .home-img .img-box .img-item img {
+        width: 85%;
+        top: 20px;
+    }
+
+    /* Background animation */
+    .bars-animation .bar {
+        border-width: 1px;
+    }
+}
+
+
+/* ===== Very small phones ===== */
+@media screen and (max-width: 380px) {
+
+    .navbar ul {
+        gap: 8px 10px;
+    }
+
+    .navbar ul li a {
+        font-size: 12px;
+    }
+
+    .home-info h1 {
+        font-size: 28px;
+    }
+
+    .home-info h2,
+    .home-info h2 span {
+        font-size: 18px;
+    }
+
+    .home-info p {
+        font-size: 13px;
+    }
+
+    .home-img .img-box {
+        width: 58vw;
+        height: 58vw;
     }
 }
